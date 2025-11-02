@@ -47,5 +47,5 @@ npm start
 ```
 
 The app should now be running at:  http://localhost:3000
-
+Link to website : https://tria-assignment-gamma.vercel.app/
 
