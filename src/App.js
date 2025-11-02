@@ -1,23 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import Sidebar from './components/DashNav';
+import ContactList from './components/ContactList';
+import AboutUs from './components/AboutUs';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+      <div className="flex">
+        {/* Sidebar stays on the left */}
+        <Sidebar />
+        
+        {/* Main content */}
+        <div className="ml-[240px] flex-1 p-6">
+          <Routes>
+            <Route path="/contact-list" element={<ContactList />} />
+            <Route path="/" element={<AboutUs />} />
+          </Routes>
+        </div>
+      </div>
+    </Router>
     </div>
   );
 }
