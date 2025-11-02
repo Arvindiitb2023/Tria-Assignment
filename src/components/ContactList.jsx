@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/contacts"; // <-- replace with your own MockAPI URL
+const API_URL = "https://6903a60fd0f10a340b253898.mockapi.io/api/contacts/Contacts"; // <-- replace with your own MockAPI URL
 
 const ContactList = () => {
   const [contacts, setContacts] = useState([]);
